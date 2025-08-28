@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestão de Banca - Seu Controle Inteligente</title>
+
+  <!-- Ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    :root{
+      /* Se quiser usar imagem local, salve como bg-estadio.jpg e troque a URL abaixo por 'bg-estadio.jpg' */
+      --bg-estadio: url('https://images.pexels.com/photos/399187/pexels-photo-399187.jpeg?auto=compress&cs=tinysrgb&w=1920');
+      --verde: #28a745;
+      --verde-escuro: #1e7e34;
+      --verde-luz: #00ff88;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      font-family: Arial, sans-serif;
+      margin:0;
+      color:#fff;
+      background: var(--bg-estadio) no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+      min-height: 100vh;
+    }
+    /* Overlay para leitura */
+    body::before{
+      content:"";
+      position: fixed;
+      inset:0;
+      background: rgba(0,0,0,.55);
+      z-index:0;
+    }
+
+    header, section, footer{ position: relative; z-index: 1; }
+
+    header{
+      background: rgba(28,140,60,.9);
+      color:#fff;
+      padding:40px 20px;
+      text-align:center;
+      border-bottom: 3px solid var(--verde);
+    }
+    header h1{ margin:0; font-size:2.2rem; }
+    header p{ margin:10px 0 0; font-size:1.1rem; }
+
+    .cta-btn{
+      background: var(--verde);
+      color:#fff;
+      padding:14px 22px;
+      font-size:1.1rem;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      transition:.25s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .cta-btn:hover{ background: var(--verde-escuro); transform: translateY(-1px); }
+
+    .section{
+      max-width:1100px;
+      margin:24px auto;
+      padding:42px 20px;
+      text-align:center;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:14px;
+      backdrop-filter: blur(4px);
+    }
+
+    .benefits{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+      gap:18px;
+      margin-top:28px;
+    }
+    .card{
+      background: rgba(255,255,255,.08);
+      color:#fff;
+      padding:20px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.12);
+      box-shadow: 0 8px 22px rgba(0,0,0,.25);
+    }
+    .card h3{ color: var(--verde-luz); margin-top:0; }
+
+    .screenshot img{
+      max-width:320px;
+      width:100%;
+      border-radius:16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,.45);
+      border:1px solid rgba(255,255,255,.12);
+    }
+
+    .pricing{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+    .price-card{
+      background: rgba(255,255,255,.08);
+      color:#fff;
+      padding:26px;
+      border-radius:14px;
+      border:2px solid var(--verde-luz);
+      box-shadow: 0 10px 26px rgba(0,0,0,.3);
+    }
+    .price-card h3{ margin:0 0 8px; font-size:1.35rem; color: var(--verde-luz); }
+    .price{ font-size:2rem; font-weight:700; color: var(--verde); margin:14px 0 18px; }
+    .price-card button{ width:100%; }
+
+    .seal{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background: rgba(0,0,0,.55);
+      border:1px solid rgba(255,255,255,.15);
+      font-weight:600;
+      margin-top:10px;
+    }
+
+    footer{
+      background: rgba(0,0,0,.9);
+      text-align:center;
+      padding:18px 12px;
+      font-size:.9rem;
+      margin-top:24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1><i class="fa-solid fa-futbol"></i> Controle Sua Banca de Apostas</h1>
+    <p>Organize suas apostas, maximize seus lucros e nunca mais quebre a banca.</p>
+    <button class="cta-btn">Quero Começar Agora</button>
+    <div class="seal"><i class="fa-solid fa-shield-halved"></i> Garantia de Satisfação • Teste grátis por 7 dias</div>
+  </header>
+
+  <section class="section screenshot">
+    <h2><i class="fa-solid fa-mobile-screen-button"></i> Veja como é simples!</h2>
+    <p>Saldo atualizado, taxa de acertos, total de apostas e ROI em tempo real.</p>
+    <img src="screenshot-app.png" alt="Print do App"/>
+  </section>
+
+  <section class="section">
+    <h2><i class="fa-solid fa-trophy"></i> Por que usar o nosso app?</h2>
+    <div class="benefits">
+      <div class="card">
+        <h3><i class="fa-solid fa-list-check"></i> Controle Total</h3>
+        <p>Monitore sua banca sem precisar de planilhas complicadas.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-chart-line"></i> Estatísticas Reais</h3>
+        <p>Saiba seu desempenho de forma clara, evite decisões emocionais.</p>
+      </div>
+      <div class="card">
+        <h3><i class="fa-solid fa-sack-dollar"></i> Lucro e ROI</h3>
+        <p>Veja exatamente quanto ganhou ou perdeu, com gráficos intuitivos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><i class="fa-solid fa-credit-card"></i> Escolha o seu plano</h2>
+    <div class="pricing">
+      <div class="price-card">
+        <h3><i class="fa-solid fa-calendar-day"></i> Plano Mensal</h3>
+        <p>Ideal para começar agora.</p>
+        <div class="price">R$ 19,90/mês</div>
+        <button class="cta-btn">Assinar Mensal</button>
+      </div>
+
+      <div class="price-card">
+        <h3><i class="fa-solid fa-calendar-week"></i> Plano Trimestral</h3>
+        <p>Mais economia e foco na gestão.</p>
+        <div class="price">R$ 49,90/trimestre</div>
+        <button class="cta-btn">Assinar Trimestral</button>
+      </div>
+
+      <div class="price-card">
+        <h3><i class="fa-solid fa-calendar"></i> Plano Anual</h3>
+        <p>Assine por um ano e economize ainda mais.</p>
+        <div class="price">R$ 149,90/ano</div>
+        <button class="cta-btn">Assinar Anual</button>
+      </div>
+    </div>
+    <div style="margin-top:16px;">
+      <span class="seal"><i class="fa-solid fa-badge-check"></i> 7 dias grátis • Cancele quando quiser</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2><i class="fa-solid fa-mobile"></i> Tenha sua banca na palma da mão</h2>
+    <p>Disponível para Android. Acesse agora e teste gratuitamente.</p>
+    <button class="cta-btn">Acessar agora</button>
+  </section>
+
+  <footer>
+    © 2025 Gestão de Banca | Desenvolvido por Sucesso Financeiro
+  </footer>
+
+</body>
+</html>
